@@ -2,7 +2,7 @@
 ## wrk
 ### build 
 ```shell
-docker build -t wrk .
+docker build -t wrk ./wrk_Dockerfile
 ```
 
 ### use
