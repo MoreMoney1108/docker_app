@@ -20,7 +20,8 @@ RUN cd /tmp/wrk-4.2.0 && \
 RUN cd /tmp/lua-cjson-2.1.0 && \
    make CFLAGS="-I//usr/include/lua5.1/"
 
-FROM debian:stable-slim
+# FROM debian:stable-slim
+FROM alpine:3.19
 COPY --from=build /tmp/wrk-4.2.0/wrk /usr/local/bin
 COPY --from=build /tmp/lua-cjson-2.1.0/cjson.so /usr/local/lib/lua/5.1/cjson.so
 
